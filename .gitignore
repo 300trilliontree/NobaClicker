@@ -1,0 +1,34 @@
+# Node.js dependencies
+node_modules/
+
+# TypeScript build output
+dist/
+build/
+
+# Environment variables
+.env
+
+# Log files
+logs/
+*.log
+*.log.*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+
+# Optional npm cache directory
+.npm/
+
+# Coverage directory for testing (if using Jest, Mocha, etc.)
+coverage/
+
+# Prisma specific
+.prisma/
+
+# Generated files by tools (e.g., tailwind build output)
+public/css/
+public/js/
