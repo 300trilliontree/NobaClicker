@@ -28,6 +28,8 @@ coverage/
 
 # Prisma specific
 .prisma/
+prisma/dev.db
+prisma/migrations
 
 # Generated files by tools (e.g., tailwind build output)
 public/css/

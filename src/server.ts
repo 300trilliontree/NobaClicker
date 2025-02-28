@@ -1,5 +1,8 @@
 import Fastify from "fastify";
 import path from "path";
+import dotenv from "dotenv";
+dotenv.config();
+import open from "open";
 import fastifyStatic from "@fastify/static";
 import prismaPlugin from "./plugins/prisma";
 import clickRoutes from "./routes/click";
@@ -23,10 +26,12 @@ fastify.register(prismaPlugin);
 fastify.register(clickRoutes);
 fastify.register(cpsRoutes);
 
-fastify.listen({ port: 3000 }, (err, address) => {
+// サーバーのポート番号を設定
+fastify.listen({ port: process.env.serverPort as unknown as number }, (err, address) => {
   if (err) {
     fastify.log.error(err);
     process.exit(1);
   }
   console.log(`Server running on ${address}`);
+  open(address);
 });
